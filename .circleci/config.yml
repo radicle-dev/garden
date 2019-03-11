@@ -1,0 +1,57 @@
+version: 2
+
+# Environment shared between jobs.
+defaults: &defaults
+  environment:
+    HUGO_VERSION: 0.54.0
+  docker:
+    - image: google/cloud-sdk
+
+# Use reference to avoid duplication for dependency setup.
+_run:
+  dependencies: &dependencies
+    command: |-
+      set -ex
+
+      apt-get update
+      apt-get install -y build-essential golang python-docutils python-openssl wget
+
+      wget "https://github.com/gohugoio/hugo/releases/download/v$HUGO_VERSION/hugo_extended_${HUGO_VERSION}_Linux-64bit.deb"
+      apt-get install "./hugo_extended_${HUGO_VERSION}_Linux-64bit.deb"
+      dpkg -i hugo*.deb
+
+jobs:
+  deploy:
+    <<: *defaults
+    steps:
+      - checkout
+      - run: *dependencies
+      - run: |-
+          set -ex
+
+          git clone https://github.com/radicle-dev/radicle.xyz.git
+
+          go run cmd/generate/main.go -plots.dir . > radicle.xyz/themes/rad/layouts/partials/plots.html
+
+          cd radicle.xyz
+
+          make build
+
+          export CLOUDSDK_PYTHON_SITEPACKAGES=1
+
+          echo "$GCLOUD_SERVICE_KEY" | \
+            gcloud auth activate-service-account \
+              circleci-radiclexyz-uploader@opensourcecoin.iam.gserviceaccount.com \
+              --key-file=-
+
+          gsutil -m -h 'Cache-Control:public,max-age=10' cp public/garden/index.html gs://alpha.radicle.xyz/garden/
+
+workflows:
+  version: 2
+  regrow_garden:
+    jobs:
+      - deploy
+        # filters:
+        #   branches:
+        #     only:
+        #       - master
