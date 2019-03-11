@@ -46,7 +46,7 @@ func main() {
 	}
 
 	sort.Slice(files, func(i, j int) bool {
-		return files[i].ModTime().Unix() < files[j].ModTime().Unix()
+		return files[i].ModTime().Unix() > files[j].ModTime().Unix()
 	})
 
 	plots := []string{}
