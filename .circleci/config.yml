@@ -31,7 +31,7 @@ jobs:
 
           git clone https://github.com/radicle-dev/radicle.xyz.git
 
-          go run cmd/generate/main.go -plots.dir . > radicle.xyz/themes/rad/layouts/partials/plots.html
+          ./bin/generate -plots.dir . > radicle.xyz/themes/rad/layouts/partials/plots.html
 
           cd radicle.xyz
 
