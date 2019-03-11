@@ -50,8 +50,8 @@ workflows:
   version: 2
   regrow_garden:
     jobs:
-      - deploy
-        # filters:
-        #   branches:
-        #     only:
-        #       - master
+      - deploy:
+          filters:
+            branches:
+              only:
+                - master
