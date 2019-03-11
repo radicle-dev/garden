@@ -1,2 +1,35 @@
 # radicle-garden
-This is the Radicle community space where anyone can add a plot by walking through our Radicle introductory guide.
+
+This is a community space where anyone can add a garden by walking through our [Radicle introductory guide](http://alpha.radicle.xyz/docs/index.html#tutorial-1-contributor).
+
+The text files in this repo are compiled into a static website which can be found at [radicle.xyz/garden](http://radicle.xyz/garden)
+
+```
+                        vv
+                     vvv^^^^vvvvv
+                 vvvvvvvvv^^vvvvvv^^vvvvv
+        vvvvvvvvvvv^^^^^^^^^^^^^vvvvv^^^vvvvv
+    vvvvvvv^^^^^^^^^vvv^^^^^^^vvvvvvvvvvv^^^vvv
+  vvvv^^^^^^vvvvv^^^^^^^vv^^^^^^^vvvv^^^vvvvvv
+ vv^^^^^^^^vvv^^^^^vv^^^^vvvvvvvvvvvv^^^^^^vv^
+ vvv^^^^^vvvv^^^^^^vvvvv^^vvvvvvvvv^^^^^^vvvvv^
+  vvvvvvvvvv^^^v^^^vvvvvv^^vvvvvvvvvv^^^vvvvvvvvv
+   ^vv^^^vvvvvvv^^vvvvv^^^^^^^^vvvvvvvvv^^^^^^vvvvvv
+     ^vvvvvvvvv^^^^vvvvvv^^^^^^vvvvvvvv^^^vvvvvvvvvv^v
+        ^^^^^^vvvv^^vvvvv^vvvv^^^v^^^^^^vvvvvv^^^^vvvvv
+ vvvv^^vvv^^^vvvvvvvvvv^vvvvv^vvvvvv^^^vvvvvvv^^vvvvv^
+vvv^vvvvv^^vvvvvvv^^vvvvvvv^^vvvvv^v##vvv^vvvv^^vvvvv^v
+ ^vvvvvv^^vvvvvvvv^vv^vvv^^^^^^_____##^^^vvvvvvvv^^^^
+    ^^vvvvvvv^^vvvvvvvvvv^^^^/\@@@@@@\#vvvv^^^
+         ^^vvvvvv^^^^^^vvvvv/__\@@@@@@\^vvvv^v
+             ;^^vvvvvvvvvvv/____\@@@@@@\vvvvvvv
+             ;      \_  ^\|[  -:] ||--| | _/^^
+             ;        \   |[   :] ||_/| |/
+             ;         \\ ||___:]______/
+             ;          \   ;=; /
+             ;           |  ;=;|
+             ;          ()  ;=;|
+            (()          || ;=;|
+                        / / \;=;\
+
+```
