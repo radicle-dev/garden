@@ -1,8 +1,8 @@
 # radicle-garden
 
-This is a community space where anyone can add a garden by walking through our [Radicle introductory guide](http://alpha.radicle.xyz/docs/index.html#tutorial-1-contributor).
+This is a community space where anyone can add a garden by walking through our [Radicle introductory guide](http://www.radicle.xyz/docs/index.html#tutorial-1-contributor).
 
-The text files in this repo are compiled into a static website which can be found at [radicle.xyz/garden](http://radicle.xyz/garden)
+The text files in this repo are compiled into a static website which can be found at [www.radicle.xyz/garden](http://www.radicle.xyz/garden/index.html)
 
 ```
                         vv
