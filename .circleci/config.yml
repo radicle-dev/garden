@@ -44,7 +44,7 @@ jobs:
               circleci-radiclexyz-uploader@opensourcecoin.iam.gserviceaccount.com \
               --key-file=-
 
-          gsutil -m -h 'Cache-Control:public,max-age=10' cp public/garden/index.html gs://alpha.radicle.xyz/garden/
+          gsutil -m -h 'Cache-Control:public,max-age=10' cp public/garden/index.html gs://www.radicle.xyz/garden/
 
 workflows:
   version: 2
